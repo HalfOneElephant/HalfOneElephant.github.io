@@ -1,186 +1,304 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="zh"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="zh"> <![endif]-->
+<!--[if lt IE 8]><html class="no-js ie ie7" lang="zh"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8" lang="zh"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!-->
 <html class="no-js" lang="zh">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <title>半只大象</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <script src="js/modernizr.js"></script>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <script src="https://blog.hlzyw.cn/style/js/jquery-1.8.3.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-</head>
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>半只大象</title>
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/layout.css" />
+		<link rel="stylesheet" href="css/media-queries.css" />
+		<link rel="stylesheet" href="css/magnific-popup.css" />
+		<script src="js/modernizr.js"></script>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<script src="https://blog.hlzyw.cn/style/js/jquery-1.8.3.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+		/>
+	</head>
 
-<body>
-    <header id="home" class="headerF">
+	<body>
+		<header id="home" class="headerF">
+			<script>
+				document
+					.getElementById("home")
+					.setAttribute("class", "headerT");
+				var num = 0;
+				function bgp() {
+					num = num + 1;
+					if (num == 0) {
+						document
+							.getElementById("home")
+							.setAttribute("class", "headerT");
+					}
+					if (num == 1) {
+						document
+							.getElementById("home")
+							.setAttribute("class", "headerF");
+					}
+					if (num == 2) {
+						document
+							.getElementById("home")
+							.setAttribute("class", "headerS");
+					}
+					if (num == 3) {
+						document
+							.getElementById("home")
+							.setAttribute("class", "headerFo");
+					}
+					if (num == 4) {
+						document
+							.getElementById("home")
+							.setAttribute("class", "headerFi");
+					}
+					if (num > 4) {
+						num = -1;
+					}
+				}
+				//document.getElementsById('home').style.background = pic;
+			</script>
+			<nav id="nav-wrap">
+				<a class="mobile-btn" href="#nav-wrap" title="Show navigation"
+					>Show navigation</a
+				>
+				<a class="mobile-btn" href="#" title="Hide navigation"
+					>Hide navigation</a
+				>
 
-        <script>document.getElementById("home").setAttribute("class", "headerT");
-            var num=0;
-            function bgp() {
+				<ul id="nav" class="nav">
+					<li class="current">
+						<a class="smoothscroll" href="#home">主页</a>
+					</li>
+					<li>
+						<a class="smoothscroll" onclick="bgp()">换壁纸哈哈！</a>
+					</li>
+				</ul>
+				<!-- end #nav -->
+			</nav>
+			<!-- end #nav-wrap -->
 
-                num=num+1;
-                if (num == 0) {
-                    document.getElementById("home").setAttribute("class", "headerT");
+			<div class="row banner">
+				<div class="banner-text">
+					<h1 class="responsive-headline">我是半只大象。</h1>
+					<h3>
+						我是半只大象
+						<span
+							>一个14岁b站up主(<a
+								rel="nofollow"
+								target="_parent"
+								href="https://space.bilibili.com/438773417"
+								class="tm-external-link"
+								>-HalfAnElephant-</a
+							>)</span
+						>，制作一些有趣而又有真材实料的程序，自学高数和编程，请
+						<a class="smoothscroll" href="#about">往下滑</a>
+						以更加<a class="smoothscroll" href="#about"
+							>了解我吧！</a
+						>.
+					</h3>
 
-                } if (num == 1) {
+					<hr />
+					<ul class="social"></ul>
+				</div>
+			</div>
 
-                    document.getElementById("home").setAttribute("class", "headerF");
+			<p class="scrolldown">
+				<a class="smoothscroll" href="#about"
+					><i class="icon-down-circle"></i
+				></a>
+			</p>
+		</header>
+		<!-- Header End -->
 
-                }
-                if (num == 2) {
-                    document.getElementById("home").setAttribute("class", "headerS");
+		<!-- Style Guide Section
+    ================================================== -->
+		<section
+			id="about"
+			style="padding: 90px 0 72px; background: rgb(248, 255, 254)"
+		>
+			<div class="row add-bottom">
+				<div class="twelve columns">
+					<h1>关于我</h1>
 
-                }
-                if (num == 3) {
-                    document.getElementById("home").setAttribute("class", "headerFo");
+					<p class="lead add-bottom">
+						没错，爱编程、做视频，以及社死。。。
+					</p>
+				</div>
+			</div>
+			<!-- Row End-->
 
-                }
-                if (num == 4) {
-                    document.getElementById("home").setAttribute("class", "headerFi");
+			<div class="row add-bottom">
+				<div class="twelve columns add-bottom">
+					<nav class="pagination add-bottom">
+						<span href="#" class="page-numbers prev inactive"
+							>不存在的上一页</span
+						>
+						<span class="page-numbers current">1</span>
+						<a href="#" class="page-numbers prev inactive"
+							>又是不存在的下一页</a
+						>
+					</nav>
+				</div>
+			</div>
 
-                }
-                if (num > 4) {
-                    num = -1;
-                }
-            }
-                //document.getElementsById('home').style.background = pic;
-            </script>
-        <nav id="nav-wrap">
+			<div class="row add-bottom">
+				<div class="twelve columns">
+					<div id="gitalk-container"></div>
+					<script type="text/javascript">
+						var gitalk = new Gitalk({
+							clientID: `09b564e3d24906777a9c`, //上面获取到的值
+							clientSecret: `840f48b88805ce05feac62313c4087239e403631`, //上面获取到的值
+							repo: "HalfAnElephant.github.io", //您刚才建立仓库的名字
+							owner: "HalfAnElephant", //你的GitHub用户名字
+							admin: ["HalfAnElephant"], //你的GitHub用户的名字
+							id: "first", //,每个页面的ID不能一样如果重复就会把其他页面的评论引进来,每个页面的ID不能一样
+						});
+						gitalk.render("gitalk-container");
+					</script>
+				</div>
+			</div>
+			<!-- Row End-->
 
-            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+			<script type="text/javascript">
+				/* 鼠标点击特效 */
 
-            <ul id="nav" class="nav">
-                <li class="current"><a class="smoothscroll" href="#home">主页</a></li>
-                <li><a class="smoothscroll" onclick="bgp()">换壁纸哈哈！</a></li>
-            </ul> <!-- end #nav -->
+				jQuery(function () {
+					$("html").click(function (e) {
+						var a_idx = Math.floor(Math.random() * 26);
+						var a = new Array(
+							"乐观",
+							"❤",
+							"积极",
+							"向上",
+							"自由",
+							"(*^▽^*)",
+							"开心",
+							"快乐",
+							"善良",
+							"可爱",
+							"暴富",
+							"暴瘦",
+							"❤",
+							"富强",
+							"民主",
+							"文明",
+							"和谐",
+							"自由",
+							"平等",
+							"公正",
+							"法治",
+							"爱国",
+							"敬业",
+							"诚信",
+							"友善",
+							"半只大象万岁！"
+						);
+						var color1 = Math.floor(Math.random() * 255);
+						var color2 = Math.floor(Math.random() * 255);
+						var color3 = Math.floor(Math.random() * 255);
 
-        </nav> <!-- end #nav-wrap -->
+						var $i = $("<span />").text(a[a_idx]);
+						a_idx = (a_idx + 1) % a.length;
+						var x = e.pageX,
+							y = e.pageY;
+						$i.css({
+							"z-index": 9999999999999,
+							top: y - 20,
+							left: x,
+							position: "absolute",
+							"font-family": "mmm",
+							fontSize: Math.floor(Math.random() * 22 + 15),
+							"font-weight": "bold",
+							color:
+								"rgb(" +
+								color1 +
+								"," +
+								color2 +
+								"," +
+								color3 +
+								")",
+							"-webkit-user-select": "none",
+							"-moz-user-select": "none",
+							"-ms-user-select": "none",
+							"user-select": "none",
+						});
+						$("body").append($i);
+						$i.animate(
+							{
+								top: y - 200,
+								opacity: 0,
+							},
+							1000,
+							function () {
+								$i.remove();
+							}
+						);
+					});
+				});
+			</script>
+			<style>
+				#github svg {
+					transition: all 1s;
+					fill: #222;
+					color: #fff;
+					position: absolute;
+					top: 0;
+					right: 0;
+					border: 0;
+					width: 80px;
+					height: 80px;
+				}
 
-        <div class="row banner">
-            <div class="banner-text">
-                <h1 class="responsive-headline">我是半只大象。</h1>
-                <!-- <h3>
-                    我是半只大象 <span>一个14岁b站up主(<a rel="nofollow" target="_parent" href="https://space.bilibili.com/560117518" class="tm-external-link">-m1chaeL-</a>)</span>，制作一些有趣而又有真材实料的视频，还自学开发过两个游戏，请 <a class="smoothscroll" href="#about">往下滑</a>
-                    以更加<a class="smoothscroll" href="#about">了解我吧！</a>.
-                </h3> -->
-
-                <hr />
-                <ul class="social">
-                </ul>
-            </div>
-        </div>
-
-        <p class="scrolldown">
-            <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-        </p>
-
-    </header> <!-- Header End -->
-
-
-
-
-
-
-
-        <script type="text/javascript">/* 鼠标点击特效 */
-
-            jQuery(function () {
-                $("html").click(function (e) {
-                    var a_idx = Math.floor((Math.random() * 26));
-                    var a = new Array(
-                        "乐观", "❤", "积极", "向上", "自由", "(*^▽^*)", "开心", "快乐",
-                        "善良", "可爱", "暴富", "暴瘦", "❤", "富强", "民主", "文明", "和谐", "自由", "平等",
-                        "公正", "法治", "爱国", "敬业", "诚信", "友善"
-
-
-
-                    );
-                    var color1 = Math.floor((Math.random() * 255));
-                    var color2 = Math.floor((Math.random() * 255));
-                    var color3 = Math.floor((Math.random() * 255));
-
-                    var $i = $("<span />").text(a[a_idx]);
-                    a_idx = (a_idx + 1) % a.length;
-                    var x = e.pageX,
-                        y = e.pageY;
-                    $i.css({
-                        "z-index": 9999999999999,
-                        "top": y - 20,
-                        "left": x,
-                        "position": "absolute",
-                        "font-family": "mmm",
-                        "fontSize": Math.floor((Math.random() * 22) + 15),
-                        "font-weight": "bold",
-                        "color": "rgb(" + color1 + "," + color2 + "," + color3 + ")",
-                        "-webkit-user-select": "none",
-                        "-moz-user-select": "none",
-                        "-ms-user-select": "none",
-                        "user-select": "none",
-                    });
-                    $("body").append($i);
-                    $i.animate({
-                        "top": y - 200,
-                        "opacity": 0
-                    },
-                        1000,
-                        function () {
-                            $i.remove();
-                        });
-                });
-            });</script>
-        <style>
-            #github svg {
-                transition: all 1s;
-                fill: #222;
-                color: #fff;
-                position: absolute;
-                top: 0;
-                right: 0;
-                border: 0;
-                width: 80px;
-                height: 80px;
-            }
-
-            #github:hover svg {
-                width: 160px;
-                height: 160px;
-            }
-        </style>
-    </section>
-    <!-- Resume Section End--
+				#github:hover svg {
+					width: 160px;
+					height: 160px;
+				}
+			</style>
+		</section>
+		<!-- Resume Section End--
     <!-- footer
     ================================================== -->
-    <footer>
+		<footer>
+			<div id="go-top" style="display: block">
+				<a class="smoothscroll" title="返回顶部" href="#home"
+					><i class="icon-up-open"></i
+				></a>
+			</div>
+			<p>-半只大象- 2022</p>
+		</footer>
 
-        <div id="go-top" style="display: block;"><a class="smoothscroll" title="返回顶部" href="#home"><i class="icon-up-open"></i></a></div>
-        <p>-m1chaeL- 2022</p>
-
-    </footer>
-
-    <!-- Java Script
+		<!-- Java Script
     ================================================== -->
-    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <script src="js/jquery.flexslider.js"></script>
-    <script src="js/waypoints.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/magnific-popup.js"></script>
-    <!-- <script src="js/doubletaptogo.js"></script> -->
-    <!-- <script src="js/spin.js"></script> -->
-
-</body>
-
+		<script>
+			window.jQuery ||
+				document.write(
+					'<script src="js/jquery-1.10.2.min.js"><\/script>'
+				);
+		</script>
+		<script
+			type="text/javascript"
+			src="js/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/waypoints.js"></script>
+		<script src="js/jquery.fittext.js"></script>
+		<script src="js/magnific-popup.js"></script>
+		<!-- <script src="js/doubletaptogo.js"></script> -->
+		<!-- <script src="js/spin.js"></script> -->
+	</body>
 </html>
