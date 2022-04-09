@@ -87,7 +87,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { quotes: & #8220 &#8220; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -304,7 +304,7 @@ a {
 	a:hover {
 		color: #F00
 	}
-/* 鼠标经过悬停字体颜色 */ 
+/* 鼠标经过悬停字体颜色 */
 /*  4. List  --------------------------------------------------------- */
 
 ul, ol { margin-bottom: 24px; margin-top: 12px; }
@@ -449,6 +449,11 @@ dd { margin: 0 0 0 20px; }
 .pagination .inactive:hover {
    background-color: #E6E8EB;
 	color: #A9ADB2;
+}
+.pagination .active,
+.pagination .active:hover {
+   background-color: #41d0d5;
+	color: #ffffff;
 }
 .pagination .prev, .pagination .next {}
 
@@ -807,7 +812,6 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
 
 
 
