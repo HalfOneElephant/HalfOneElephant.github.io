@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+	<head>
+		<meta charset="utf-8" />
+		<title>人脸识别</title>
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link rel="stylesheet" href="css/my.css" />
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/layout.css" />
+		<link rel="stylesheet" href="css/media-queries.css" />
+		<link rel="stylesheet" href="css/magnific-popup.css" />
+		<script src="js/modernizr.js"></script>
+		<link rel="shortcut icon" href="../images/m1.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<script src="https://blog.hlzyw.cn/style/js/jquery-1.8.3.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+		/>
+		<title>半只大象人脸识别</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			canvas {
+				position: absolute;
+				/* background-color: #fff; */
+			}
+			h1 {
+				font: 10px/0.7em "opensans-bold", sans-serif;
+				color: #fff;
+				text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+			}
+		</style>
+	</head>
+	<body
+		background="images/bg.jpeg"
+		style="
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-attachment: fixed;
+		"
+	>
+		<video id="video" width="720" height="480" autoplay muted></video>
+		<script src="face-api.min.js"></script>
+		<script src="app.js"></script>
+
+		<script type="text/javascript">
+			/* 鼠标点击特效 */
+
+			jQuery(function () {
+				$("html").click(function (e) {
+					var a_idx = Math.floor(Math.random() * 26);
+					var a = new Array(
+						"乐观",
+						"❤",
+						"积极",
+						"向上",
+						"自由",
+						"(*^▽^*)",
+						"开心",
+						"快乐",
+						"善良",
+						"可爱",
+						"暴富",
+						"暴瘦",
+						"❤",
+						"富强",
+						"民主",
+						"文明",
+						"和谐",
+						"自由",
+						"平等",
+						"公正",
+						"法治",
+						"爱国",
+						"敬业",
+						"诚信",
+						"友善",
+						"半只大象万岁！"
+					);
+					var color1 = Math.floor(Math.random() * 255);
+					var color2 = Math.floor(Math.random() * 255);
+					var color3 = Math.floor(Math.random() * 255);
+
+					var $i = $("<span />").text(a[a_idx]);
+					a_idx = (a_idx + 1) % a.length;
+					var x = e.pageX,
+						y = e.pageY;
+					$i.css({
+						"z-index": 9999999999999,
+						top: y - 20,
+						left: x,
+						position: "absolute",
+						"font-family": "mmm",
+						fontSize: Math.floor(Math.random() * 22 + 15),
+						"font-weight": "bold",
+						color:
+							"rgb(" + color1 + "," + color2 + "," + color3 + ")",
+						"-webkit-user-select": "none",
+						"-moz-user-select": "none",
+						"-ms-user-select": "none",
+						"user-select": "none",
+					});
+					$("body").append($i);
+					$i.animate(
+						{
+							top: y - 200,
+							opacity: 0,
+						},
+						1000,
+						function () {
+							$i.remove();
+						}
+					);
+				});
+			});
+		</script>
+	</body>
+</html>
