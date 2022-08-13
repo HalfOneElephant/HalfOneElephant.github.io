@@ -1,0 +1,251 @@
+body,html{
+    height: 100%;
+    width:100%;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+button.return-to-top{
+    transition: all 0.3s ease;
+    position: fixed;
+    width: 72px;
+    height: 72px;
+    background-color: rgba(255,64,129,1);
+    border-radius: 50%;
+    right: 25px;
+    bottom: 20px;
+    z-index: 98;
+    box-shadow: 2px 3px 10px #000000aa;
+    border:none;
+    outline: none;
+    outline-color: rgba(0,0,0,0);
+}
+
+
+
+div.return-to-top :hover{
+    background-color: rgba(255,64,129,0.8);
+    transition: all 0.3s ease;
+}
+
+button.return-to-top img{
+    z-index: 99;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0);
+}
+
+button.return-to-top :hover{
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+
+
+ul.guide {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:46px;
+    background-color: #07677acc;
+    text-align: center;
+    top: 0;
+    z-index:100;
+    position: sticky;
+}
+
+ul.guide li{
+    margin-top: 11px;
+    display: inline-block;
+
+}
+
+ul.guide li a {
+    transition: all 0.3s ease;
+    font-size: 18px;
+    display: inline;
+    color: rgb(255, 255, 255);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left:15px;
+    padding-right:15px;
+    text-decoration: none;
+}
+
+ul.guide li a:hover {
+    background-color: #0000003c;
+    color: white;
+    border-radius:10px;
+}
+
+ul.guide li a#home{
+    color:rgb(255, 162, 0);
+}
+
+div.tx{
+    padding-top: 50px;
+    width:auto;
+    height: auto;
+    text-align: center;
+}
+
+div.tx img{
+    display: inline-block;
+    height: 100px;
+    border-radius:50px;
+    box-shadow: 2px 3px 10px #000000aa;
+}
+
+div.userid{
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    text-align: center;
+}
+
+div.userid a{
+    font-size: 40px;
+    color: rgb(63, 81, 181);
+    display: inline-block;
+    text-decoration: none;
+}
+
+div.bigbox{
+    display: block;
+    width: 95%;
+    max-width: 1600px;
+    position: relative;
+    height: auto;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.bigbox :first-child{
+    margin-top: 50px;
+}
+
+div.bigbox :hover{
+    box-shadow: 1px 1px 10px #8c8c8caa;
+    transition: all 0.3s ease;
+
+}
+
+div.smallbox{
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background-color: #ffffff;
+    border-radius:5px;
+    box-shadow: 1px 1px 3px #8c8c8caa;
+    position: relative;
+    margin-top: 20px;
+}
+
+div.linkbox{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius:5px;
+    position: relative;
+}
+
+div.smallbox :hover{
+    box-shadow: none;
+}
+
+
+div.linkbox a{
+    position: relative;
+    margin: 25px;
+    top: 20px;
+    color: rgb(34,34,34);
+    font-size: 28px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    display: block;
+}
+
+div.tagbox{
+    position: absolute;
+    z-index: 50;
+    right: 5px;
+    bottom: 5px;
+    width: auto;
+    height: 25px;
+}
+
+div.tagbox a{
+    display: inline;
+}
+
+div.each-tag{
+    display: inline;
+    width: auto;
+    color: white;
+    height: 20px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+div.each-tag :hover{
+    box-shadow: 1px 1px 10px #8c8c8caa;
+    transition: all 0.3s ease;
+}
+
+div.each-tag a.solution{
+    width: auto;
+    background-color: #fd4b37;
+    color: white;
+    height: 20px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+div.each-tag a.knowledge{
+    width: auto;
+    background-color: #51fd37;
+    color: white;
+    height: 20px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+div.each-tag a.othertag{
+    width: auto;
+    background-color: #37fdd5;
+    color: white;
+    height: 20px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    margin: 0;
+}
