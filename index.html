@@ -1,322 +1,283 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]><html class="no-js ie ie7" lang="zh"> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8" lang="zh"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="zh">
-	<!--<![endif]-->
+<html>
 	<head>
-		<meta charset="utf-8" />
-		<title>半只大象</title>
-		<meta name="description" content="" />
-		<meta name="author" content="" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1"
-		/>
-		<link rel="stylesheet" href="css/my.css" />
-		<link rel="stylesheet" href="css/coding.css" />
-		<link rel="stylesheet" href="css/default.css" />
-		<link rel="stylesheet" href="css/layout.css" />
-		<link rel="stylesheet" href="css/media-queries.css" />
-		<link rel="stylesheet" href="css/magnific-popup.css" />
-		<script src="js/modernizr.js"></script>
-		<link rel="shortcut icon" href="images/m1.png" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-		<script src="https://blog.hlzyw.cn/style/js/jquery-1.8.3.min.js"></script>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
-		/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+		<!-- TKD模块 -->
+		<title>汩汩清流荡碧波，奔腾江河看中国</title>
+		<meta name="keywords" content="汩汩清流荡碧波，奔腾江河看中国" />
+		<meta name="description" content="汩汩清流荡碧波，奔腾江河看中国" />
+		<!-- icon -->
+		<link rel="shortcut icon" href="/static/images/校徽.jfif" />
+		<!-- 公用CSS模块 -->
+		<link rel="stylesheet" href="/static/css/animates.css" />
+		<link rel="stylesheet" href="/static/css/bootstrap.css" />
+		<link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="/static/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="/static/css/main.css" />
+		<link rel="stylesheet" href="/static/css/main_adapt.css" />
+
+		<!--[if lt IE 9]>
+			<script src="/static/js/html5shiv.js"></script>
+			<script src="/static/js/respond.js"></script>
+		<![endif]-->
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/layui/layui.all.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/carousel.js"></script>
+		<script src="/static/js/wow.min.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/pc-ready.js"></script>
+		<script src="/static/js/jquery.raty.min.js"></script>
 	</head>
 
 	<body>
-		<header id="home" class="headerF">
-			<script>
-				document
-					.getElementById("home")
-					.setAttribute("class", "headerT");
-				var num = 0;
-				function bgp() {
-					num = num + 1;
-					if (num == 0) {
-						document
-							.getElementById("home")
-							.setAttribute("class", "headerT");
-					}
-					if (num == 1) {
-						document
-							.getElementById("home")
-							.setAttribute("class", "headerF");
-					}
-					if (num == 2) {
-						document
-							.getElementById("home")
-							.setAttribute("class", "headerS");
-					}
-					if (num == 3) {
-						document
-							.getElementById("home")
-							.setAttribute("class", "headerFo");
-					}
-					if (num == 4) {
-						document
-							.getElementById("home")
-							.setAttribute("class", "headerFi");
-					}
-					if (num > 4) {
-						num = -1;
-					}
-				}
-				//document.getElementsById('home').style.background = pic;
-			</script>
-			<nav id="nav-wrap">
-				<a class="mobile-btn" href="#nav-wrap" title="Show navigation"
-					>Show navigation</a
-				>
-				<a class="mobile-btn" href="#" title="Hide navigation"
-					>Hide navigation</a
-				>
-
-				<ul id="nav" class="nav">
-					<li class="current">
-						<a class="smoothscroll" href="#home">主页</a>
-					</li>
-					<li>
-						<a class="smoothscroll" onclick="bgp()">换壁纸哈哈！</a>
-					</li>
-					<li>
-						<a
-							class="smoothscroll"
-							href="faceapi/index.html"
-							target="_blank"
-							>人脸识别</a
-						>
-					</li>
-				</ul>
-
-				<!-- end #nav -->
-			</nav>
-			<!-- end #nav-wrap -->
-
-			<div class="row banner">
-				<div class="banner-text">
-					<h1 class="responsive-headline">我是半只大象</h1>
-					<h3>
-						我是半只大象
-						<span
-							>一个14岁b站Judgement(<a
-								rel="nofollow"
-								target="_parent"
-								href="https://space.bilibili.com/438773417"
-								class="tm-external-link"
-								>-HalfAnElephant-</a
-							>)</span
-						>，制作一些有趣的程序，自学高数和编程，请
-						<a class="smoothscroll" href="#about">往下滑</a>
-						以更加
-						<a class="smoothscroll" href="#about"> 了解我吧！ </a>.
-					</h3>
-
-					<hr />
-					<ul class="social"></ul>
+		<div class="panelBar">
+			<div class="header">
+				<div class="container">
+					<div class="row" style="align-items: center">
+						<div class="col-md-2 col-sm-2 col-xs-12 logo">
+							<a href="/">
+								<img src="./static/images/校徽.jfif" alt="" />
+							</a>
+						</div>
+						<h1 style="font-weight: 600; letter-spacing: 5px; align-items: center; font-size: 56px">汩汩清流荡碧波，奔腾江河看中国</h1>
+					</div>
 				</div>
 			</div>
-
-			<p class="scrolldown">
-				<a class="smoothscroll" href="#about"
-					><i class="icon-down-circle"></i
-				></a>
-			</p>
-		</header>
-		<!-- Header End -->
-
-		<!-- Style Guide Section
-    ================================================== -->
-		<section
-			id="about"
-			style="padding: 90px 0 72px; background: rgb(248, 255, 254)"
-		>
-			<div class="row add-bottom">
-				<div class="twelve columns">
-					<h1>关于我</h1>
-
-					<p class="lead add-bottom">
-						常年浪迹于B站，GitHub，StackOverflow。
-						喜爱编程，社死。。。
-					</p>
+			<!--nav-->
+			<div class="nav_bg">
+				<div class="container">
+					<div class="row">
+						<div class="navbar-header navbar-left">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#s-navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="s-navbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/index.html" style="transition-duration: 150ms">主页</a></li>
+								<li class="dropdown">
+									<a href="/news-list.html" class="dropdown-toggle" data-toggle="dropdown" one-link-mark="yes" style="transition-duration: 150ms">新闻列表<b class="caret"></b></a>
+									<ul class="dropdown-menu s-column columns-3">
+										<li>
+											<div class="col-sm-12">
+												<ul class="s-column-dropdown">
+													<li><a href="/news-wjdc.html" one-link-mark="yes">问卷调查</a></li>
+													<li><a href="/news-yhjz.html" one-link-mark="yes">运河讲座</a></li>
+													<li><a href="/news-syjc.html" one-link-mark="yes">水样检测</a></li>
+													<li><a href="/news-bwg.html" one-link-mark="yes">参观博物馆</a></li>
+													<li><a href="/news-yjxxx.html" one-link-mark="yes">研究性学习</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li><a href="https://www.wjx.cn/vm/OHE0YVy.aspx" target="_self" style="transition-duration: 150ms">问卷调查</a></li>
+								<li><a href="/video.html" style="transition-duration: 150ms" target="_self">宣传片</a></li>
+								<li><a href="/brief-introduction.html" style="transition-duration: 150ms" target="_self">运河简介</a></li>
+								<li><a href="/river.html" style="transition-duration: 150ms" target="_self">运河地图</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!-- Row End-->
+			<a href="#" id="toTop"></a>
+		</div>
 
-			<div class="row add-bottom">
-				<div class="twelve columns add-bottom">
-					<nav class="pagination add-bottom">
-						<a
-							href="HappyHouse.html"
-							class="page-numbers prev inactive"
-						>
-							不存在的上一页
+		<!-- 开始【首页通知】 -->
+
+		<!-- 结束【首页通知】 -->
+
+		<!--开始banner图-->
+		<div class="banner pbanner">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+				<!-- 轮播（Carousel）项目 -->
+				<div id="banner" class="carousel-inner">
+					<div class="item active">
+						<a target="_blank" href="/index.html">
+							<img src="./static/images/image1.jpg" alt="链接1" style="display: flex; margin: 0 auto" />
 						</a>
-						<span class="page-numbers current">1</span>
-						<a href="Coding.html" class="page-numbers active">
-							编程相关
+					</div>
+
+					<div class="item">
+						<a target="_blank" href="/news-wjdc.html">
+							<img src="./static/images/image2.jpg" alt="链接2" style="display: flex; margin: 0 auto" />
 						</a>
-					</nav>
+					</div>
+
+					<div class="item">
+						<a target="_blank" href="/news-bwg.html">
+							<img src="./static/images/image3.jpg" alt="链接3" style="display: flex; margin: 0 auto" />
+						</a>
+					</div>
 				</div>
 			</div>
-		</section>
-		<section
-			id="gitalk"
-			style="padding: 90px 0 72px; background: rgb(248, 255, 254)"
-		>
-			<div class="row add-bottom">
-				<div class="twelve columns">
-					<div id="gitalk-container"></div>
-					<script type="text/javascript">
-						var gitalk = new Gitalk({
-							clientID: `09b564e3d24906777a9c`, //上面获取到的值
-							clientSecret: `840f48b88805ce05feac62313c4087239e403631`, //上面获取到的值
-							repo: "HalfAnElephant.github.io", //您刚才建立仓库的名字
-							owner: "HalfAnElephant", //你的GitHub用户名字
-							admin: ["HalfAnElephant"], //你的GitHub用户的名字
-							id: "first", //,每个页面的ID不能一样如果重复就会把其他页面的评论引进来,每个页面的ID不能一样
-						});
-						gitalk.render("gitalk-container");
-					</script>
+		</div>
+		<!--结束banner图-->
+		<div class="s-news">
+			<div class="top_all">
+				<img src="/static/images/title1.jpg" alt="" />
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 news_left wow bounceInLeft">
+						<div class="imgd">
+							<a href="/news-wjdc.html"><img src="/static/images/ap1.jpg" alt="" /></a>
+							<i></i>
+							<span class="ri">
+								<i>02</i>
+								<p class="date">2023-05</p>
+							</span>
+						</div>
+						<h4><a href="/news-wjdc.html"> 汩汩清流荡碧波，奔腾江河看中国 </a></h4>
+
+						<div class="news_right">
+							<ul>
+								<li class="wow bounceInLeft" data-wow-delay="0.5s">
+									<a href="/news-wjdc.html">
+										<span class="ri">
+											<i>02</i>
+											<p>2023-05</p>
+										</span>
+										<div class="wen_nei">
+											<h4>有关运河概况、历史文化、社会影响及国家相关政策问卷调查</h4>
+											<p>扬州中学中学生领导力大赛小组在扬州中国大运河博物馆进行了问卷调查</p>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="/news-list.html" class="more wow fadeInq animated" data-wow-delay="1.5s" style="visibility: visible; animation-delay: 1.5s; animation-name: fadeInq">了解更多</a>
+					</div>
+					<div class="col-md-5 wow bounceInRight">
+						<div class="index-loginbox">
+							<div class="index-loginbox-header">
+								<h4>我们的活动</h4>
+							</div>
+							<fieldset class="indexform">
+								<div class="form-group">
+									<div class="col-md-12">
+										<a class="btn btn-index reg-bg" style="margin-left: 8px" href="https://www.wjx.cn/vm/OHE0YVy.aspx">
+											<!--<i class="fa fa-group"></i> -->
+											问卷调查
+										</a>
+										<a class="btn btn-index reg-bg" style="padding-left: 85px" href="/news-yhjz.html">
+											<!--<i class="fa fa-group"></i> -->
+											专家讲座
+										</a>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-12">
+										<a class="btn btn-index log-bg" style="margin-left: 8px" href="/river.html">
+											<!--<i class="fa fa-user"></i> -->
+											运河地图
+										</a>
+										<a class="btn btn-index log-bg" style="padding-left: 85px" href="">
+											<!--<i class="fa fa-user"></i> -->
+											宣传视频
+										</a>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-12">
+										<a class="btn btn-index log-bg" style="margin-left: 8px" href="/brief-introduction.html">
+											<!--<i class="fa fa-user"></i> -->
+											运河简介
+										</a>
+										<a class="btn btn-index log-bg" style="padding-left: 85px" href="/news-list.html">
+											<!--<i class="fa fa-user"></i> -->
+											相关新闻
+										</a>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!-- Row End-->
+			<div class="top_all"><img src="/static/images/title2.jpg" alt="" /></div>
+			<div class="s_about">
+				<div class="new-info-r wow bounceInRight">
+					<div class="a_right">
+						<div class="span_y">团队简介</div>
+						<div class="span_z">OUR PROFILE</div>
+						<p>扬州中学“运河情”小组，是一群胸怀理想，希望用实际行动回报社会的青年学生，建立此网站主要是为了宣传“汩汩清流荡碧波，奔腾江河看中国”系列活动——由本小组发起，立足于京杭大运河扬州段，以江苏省扬州中学为主阵地，以学生为主要受众，向社会面辐射的京杭大运河文化与环境保护活动，以全国中学生领导力大赛为契机，向同学以及群众进行文化保护与环境保护的宣传，理念是“运河汩汩清流，青春熠熠生辉”，希望为环境治理与文化保护贡献一份微薄之力。</p>
+						<a href="/about-us.html" class="more">查看更多>></a>
+					</div>
+				</div>
+				<div class="new-info-l wow bounceInLeft">
+					<a href="http://www.kepukehuan.com/kpfront/news/2598" target="_blank"><img src="/static/images/team.jpg" alt="" /></a>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="s-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 footer-r">
+							<div class="footer-con">
+								<h3>组织单位：</h3>
+								<p>主办单位：中学生领导力大赛</p>
+								<p>指导老师：</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-			<script type="text/javascript">
-				/* 鼠标点击特效 */
+		<script type="text/javascript">
+			/* 鼠标点击特效 */
+			jQuery(function () {
+				$("html").click(function (e) {
+					var a_idx = Math.floor(Math.random() * 20);
+					var a = new Array("乐观", "❤", "积极", "向上", "自由", "善良", "可爱", "❤", "富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+					var color1 = Math.floor(Math.random() * 255);
+					var color2 = Math.floor(Math.random() * 255);
+					var color3 = Math.floor(Math.random() * 255);
 
-				jQuery(function () {
-					$("html").click(function (e) {
-						var a_idx = Math.floor(Math.random() * 26);
-						var a = new Array(
-							"乐观",
-							"❤",
-							"积极",
-							"向上",
-							"自由",
-							"(*^▽^*)",
-							"开心",
-							"快乐",
-							"善良",
-							"可爱",
-							"暴富",
-							"暴瘦",
-							"❤",
-							"富强",
-							"民主",
-							"文明",
-							"和谐",
-							"自由",
-							"平等",
-							"公正",
-							"法治",
-							"爱国",
-							"敬业",
-							"诚信",
-							"友善",
-							"半只大象万岁！"
-						);
-						var color1 = Math.floor(Math.random() * 255);
-						var color2 = Math.floor(Math.random() * 255);
-						var color3 = Math.floor(Math.random() * 255);
-
-						var $i = $("<span />").text(a[a_idx]);
-						a_idx = (a_idx + 1) % a.length;
-						var x = e.pageX,
-							y = e.pageY;
-						$i.css({
-							"z-index": 9999999999999,
-							top: y - 20,
-							left: x,
-							position: "absolute",
-							"font-family": "mmm",
-							fontSize: Math.floor(Math.random() * 22 + 15),
-							"font-weight": "bold",
-							color:
-								"rgb(" +
-								color1 +
-								"," +
-								color2 +
-								"," +
-								color3 +
-								")",
-							"-webkit-user-select": "none",
-							"-moz-user-select": "none",
-							"-ms-user-select": "none",
-							"user-select": "none",
-						});
-						$("body").append($i);
-						$i.animate(
-							{
-								top: y - 200,
-								opacity: 0,
-							},
-							1000,
-							function () {
-								$i.remove();
-							}
-						);
+					var $i = $("<span />").text(a[a_idx]);
+					a_idx = (a_idx + 1) % a.length;
+					var x = e.pageX,
+						y = e.pageY;
+					$i.css({
+						"z-index": 9999999999999,
+						top: y - 20,
+						left: x,
+						position: "absolute",
+						"font-family": "mmm",
+						fontSize: Math.floor(Math.random() * 22 + 15),
+						"font-weight": "bold",
+						color: "rgb(" + color1 + "," + color2 + "," + color3 + ")",
+						"-webkit-user-select": "none",
+						"-moz-user-select": "none",
+						"-ms-user-select": "none",
+						"user-select": "none",
 					});
+					$("body").append($i);
+					$i.animate(
+						{
+							top: y - 200,
+							opacity: 0,
+						},
+						1000,
+						function () {
+							$i.remove();
+						}
+					);
 				});
-			</script>
-			<style>
-				#github svg {
-					transition: all 1s;
-					fill: #222;
-					color: #fff;
-					position: absolute;
-					top: 0;
-					right: 0;
-					border: 0;
-					width: 80px;
-					height: 80px;
-				}
-
-				#github:hover svg {
-					width: 160px;
-					height: 160px;
-				}
-			</style>
-		</section>
-		<!-- Resume Section End--
-    <!-- footer
-    ================================================== -->
-		<footer>
-			<div id="go-top" style="display: block">
-				<a class="smoothscroll" title="返回顶部" href="#home"
-					><i class="icon-up-open"></i
-				></a>
-			</div>
-			<p>-半只大象- 2022</p>
-		</footer>
-
-		<!-- Java Script
-    ================================================== -->
-		<script>
-			window.jQuery ||
-				document.write(
-					'<script src="js/jquery-1.10.2.min.js"><\/script>'
-				);
+			});
 		</script>
-		<script
-			type="text/javascript"
-			src="js/jquery-migrate-1.2.1.min.js"
-		></script>
-		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-		<script src="js/jquery.flexslider.js"></script>
-		<script src="js/waypoints.js"></script>
-		<script src="js/jquery.fittext.js"></script>
-		<script src="js/magnific-popup.js"></script>
-		<!-- <script src="js/doubletaptogo.js"></script> -->
-		<!-- <script src="js/spin.js"></script> -->
 	</body>
 </html>

@@ -1,0 +1,42 @@
+button {
+  width: 70px;
+  height: 35px;
+  background-color: #e5b36c88; /* 设置背景颜色 */
+  border-radius: 5px; /* 设置圆角半径 */
+  color: #ffffff; /* 设置文字颜色 */
+  border: none; /* 去掉边框 */
+  cursor: pointer; /* 设置鼠标悬停时的样式 */
+  position: absolute;
+  z-index: 10;
+  transition-duration: 150ms;
+}
+button:hover{
+	width: 70px;
+  	height: 35px;
+  	background-color: #ff0000; /* 设置背景颜色 */
+  	border-radius: 5px; /* 设置圆角半径 */
+  	color: #ffffff; /* 设置文字颜色 */
+  	border: none; /* 去掉边框 */
+  	cursor: pointer; /* 设置鼠标悬停时的样式 */
+  	position: absolute;
+  	z-index: 10;
+	transition-duration: 150ms;
+}
+
+button a{
+	color: #ffffff;
+}
+
+button a:hover{
+	color: #ffffff;
+}
+
+img{
+	width: 100%;
+	position: relative;
+	z-index: -1;
+}
+
+/* cbabdacb */
+/* BD ACD ABD ABD */
+/* (2, 4) 31sqrt(2)/50 4.5 (sqrt(3)/3, sqrt(2)/2) */
