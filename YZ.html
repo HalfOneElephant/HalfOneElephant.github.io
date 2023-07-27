@@ -265,6 +265,129 @@
 							<div class="rignewstop_show">
 								<h1 style="font-size: 30px">运河城市：扬州</h1>
 								<p>发表时间：2023-05-04</p>
+								<p>浏览量:&nbsp;<span id="YZ" class="leancloud_visitors" data-flag-title="YZ"> - </span>次</p>
+								<script src="/av-min.js"></script>
+								<script>
+									// 第一个参数是appid，第二个参数是appkey，此处的只是示例
+									AV.init({
+										appId: "JXA5hbSnGqRYM9BFshmVy9rZ-MdYXbMMI",
+										appKey: "boZpBAUQF6xdmJMps2LcOymr",
+										serverURLs: "https://server.yzzxyhxz.top",
+									});
+									// 自己创建的Class的名字
+									var name = "Counter";
+									function createRecord(Counter) {
+										// 设置 ACL
+										var acl = new AV.ACL();
+										acl.setPublicReadAccess(true);
+										acl.setPublicWriteAccess(true);
+										// 获得span的所有元素
+										var elements = document.getElementsByClassName("leancloud_visitors");
+										// 一次创建多条记录
+										var allcounter = [];
+										for (var i = 0; i < elements.length; i++) {
+											// 若某span的内容不包括 '-' ，则不必创建记录
+											if (elements[i].textContent.indexOf("-") == -1) {
+												continue;
+											}
+											var title = elements[i].getAttribute("data-flag-title");
+											var url = elements[i].id;
+											var newcounter = new Counter();
+											newcounter.setACL(acl);
+											newcounter.set("title", title);
+											newcounter.set("url", url);
+											newcounter.set("time", 1);
+											allcounter.push(newcounter);
+											// 顺便更新显示span为默认值0
+											elements[i].textContent = 1;
+										}
+										AV.Object.saveAll(allcounter).then(
+											function (todo) {
+												// 成功保存记录之后
+												console.log("创建记录成功！");
+											},
+											function (error) {
+												// 异常错误
+												console.error("创建记录失败: " + error.message);
+											}
+										);
+									}
+									function showCount(Counter) {
+										// 是否需要创建新纪录的标志（添加一篇新文章）
+										var flag = false;
+										var query = new AV.Query(name);
+										query.greaterThanOrEqualTo("time", 0);
+										query.find().then(
+											function (results) {
+												// 当获取到的记录为0时置默认值
+												if (results.length == 0) {
+													$(".leancloud_visitors").text("-");
+													flag = true;
+													console.log("返回查询记录为空");
+													// 如果获取到空记录就创建新记录
+													createRecord(Counter);
+													return;
+												}
+												// 将获取到的数据设置为text
+												for (var i = 0; i < results.length; i++) {
+													var item = results[i];
+													var url = item.get("url");
+													var time = item.get("time");
+													console.log(i, "url", url, "time", time);
+													if (!!!document.getElementById(url)) {
+														continue;
+													}
+													var element = document.getElementById(url);
+													element.textContent = time;
+													var currentCount = parseInt(element.textContent);
+													var newCount = currentCount + 1;
+													element.textContent = newCount;
+
+													// 更新 LeanCloud 中对应记录的时间
+													var query = new AV.Query(name);
+													query.equalTo("url", url);
+													query
+														.first()
+														.then(function (result) {
+															if (result) {
+																result.set("time", newCount);
+																result
+																	.save()
+																	.then(function () {
+																		console.log("计数加一成功！");
+																	})
+																	.catch(function (error) {
+																		console.error("计数加一失败: " + error.message);
+																	});
+															}
+														})
+														.catch(function (error) {
+															console.error("查询记录失败: " + error.message);
+														});
+												}
+												// 当某个span含有默认值时说明需要创建记录
+												if ($(".leancloud_visitors").text().indexOf("-") != -1) {
+													flag = true;
+												}
+												// 当获取的记录数与span个数不吻合时
+												// if (results.length != $(".leancloud_visitors").length) {
+												// 	flag = true;
+												// 	console.log("not equal");
+												// }
+												if (flag) {
+													createRecord(Counter);
+												}
+											},
+											function (error) {
+												console.log("query error:" + error.message);
+											}
+										);
+									}
+									$(function () {
+										var Counter = AV.Object.extend(name);
+										showCount(Counter);
+									});
+								</script>
 							</div>
 							<div class="ql-editor" style="font-size: large">
 								<p style="line-height: 30px">扬州历史悠久，可以追溯到2800多年前的春秋时期。这座城市曾是中国古代丝绸之路上的重要港口和商业中心，历史上也曾是长江下游地区的政治、经济和文化中心。扬州是中国四大名园之一的个园所在地，有着悠久的文化底蕴。此外，扬州还是许多文化名人的故乡，如晚唐诗人李清照、明代文学家汤显祖等。</p>

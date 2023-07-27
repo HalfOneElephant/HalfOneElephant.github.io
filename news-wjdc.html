@@ -287,13 +287,14 @@
 							<div class="rignewstop_show">
 								<h1 style="font-size: 30px">有关运河概况、历史文化、社会影响及国家相关政策问卷调查</h1>
 								<p>发表时间：2023-05-04</p>
-								<script src="//unpkg.com/leancloud-storage@4.12.2/dist/av-min.js"></script>
+								<p>浏览量:&nbsp;<span id="wjdc" class="leancloud_visitors" data-flag-title="wjdc"> - </span>次</p>
+								<script src="/av-min.js"></script>
 								<script>
 									// 第一个参数是appid，第二个参数是appkey，此处的只是示例
 									AV.init({
 										appId: "JXA5hbSnGqRYM9BFshmVy9rZ-MdYXbMMI",
 										appKey: "boZpBAUQF6xdmJMps2LcOymr",
-										serverURL: "https://jxa5hbsn.api.lncldglobal.com",
+										serverURLs: "https://server.yzzxyhxz.top",
 									});
 									// 自己创建的Class的名字
 									var name = "Counter";
@@ -317,10 +318,10 @@
 											newcounter.setACL(acl);
 											newcounter.set("title", title);
 											newcounter.set("url", url);
-											newcounter.set("time", 0);
+											newcounter.set("time", 1);
 											allcounter.push(newcounter);
 											// 顺便更新显示span为默认值0
-											elements[i].textContent = 0;
+											elements[i].textContent = 1;
 										}
 										AV.Object.saveAll(allcounter).then(
 											function (todo) {
@@ -354,17 +355,47 @@
 													var item = results[i];
 													var url = item.get("url");
 													var time = item.get("time");
+													console.log(i, "url", url, "time", time);
+													if (!!!document.getElementById(url)) {
+														continue;
+													}
 													var element = document.getElementById(url);
 													element.textContent = time;
+													var currentCount = parseInt(element.textContent);
+													var newCount = currentCount + 1;
+													element.textContent = newCount;
+
+													// 更新 LeanCloud 中对应记录的时间
+													var query = new AV.Query(name);
+													query.equalTo("url", url);
+													query
+														.first()
+														.then(function (result) {
+															if (result) {
+																result.set("time", newCount);
+																result
+																	.save()
+																	.then(function () {
+																		console.log("计数加一成功！");
+																	})
+																	.catch(function (error) {
+																		console.error("计数加一失败: " + error.message);
+																	});
+															}
+														})
+														.catch(function (error) {
+															console.error("查询记录失败: " + error.message);
+														});
 												}
 												// 当某个span含有默认值时说明需要创建记录
 												if ($(".leancloud_visitors").text().indexOf("-") != -1) {
 													flag = true;
 												}
 												// 当获取的记录数与span个数不吻合时
-												if (results.length != $(".leancloud_visitors").length) {
-													flag = true;
-												}
+												// if (results.length != $(".leancloud_visitors").length) {
+												// 	flag = true;
+												// 	console.log("not equal");
+												// }
 												if (flag) {
 													createRecord(Counter);
 												}
@@ -379,7 +410,6 @@
 										showCount(Counter);
 									});
 								</script>
-								<p>浏览量:&nbsp;<span id class="leancloud_visitors" data-flag-title> - </span>次</p>
 							</div>
 							<div class="ql-editor" style="font-size: large">
 								<p style="line-height: 30px">5月2日，扬州中学中学生领导力大赛小组在扬州中国大运河博物馆进行了问卷调查，随机收集了部分人对京杭大运河文化与环境保护的了解情况的信息。</p>
