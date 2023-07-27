@@ -290,7 +290,11 @@
 								<script src="//unpkg.com/leancloud-storage@4.12.2/dist/av-min.js"></script>
 								<script>
 									// 第一个参数是appid，第二个参数是appkey，此处的只是示例
-									AV.initialize("JXA5hbSnGqRYM9BFshmVy9rZ-MdYXbMMI", "boZpBAUQF6xdmJMps2LcOymr");
+									AV.init({
+										appId: "JXA5hbSnGqRYM9BFshmVy9rZ-MdYXbMMI",
+										appKey: "boZpBAUQF6xdmJMps2LcOymr",
+										serverURL: "https://jxa5hbsn.api.lncldglobal.com",
+									});
 									// 自己创建的Class的名字
 									var name = "Counter";
 									function createRecord(Counter) {
