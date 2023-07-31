@@ -257,7 +257,9 @@
 									repo: 'HalfAnElephant.github.io ',
 									owner: 'HalfAnElephant',
 									admin: ['HalfAnElephant'],
-									distractionFreeMode: true  // Facebook-like distraction free mode
+									id: location.pathname,
+									title: document.title,
+									distractionFreeMode: false  // Facebook-like distraction free mode
 								})
 
 								gitalk.render('gitalk-container')
