@@ -6,9 +6,9 @@
 	<meta name="viewport"
 		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 	<!-- TKD模块 -->
-	<title>马蹄踏花去，梅花破雪来</title>
-	<meta name="keywords" content="马蹄踏花去，梅花破雪来" />
-	<meta name="description" content="马蹄踏花去，梅花破雪来" />
+	<title>泰伯庙旁集盛会，至德祠侧涵非遗</title>
+	<meta name="keywords" content="泰伯庙旁集盛会，至德祠侧涵非遗" />
+	<meta name="description" content="泰伯庙旁集盛会，至德祠侧涵非遗" />
 	<!-- icon -->
 	<link rel="shortcut icon" href="/static/images/logo.jpg" />
 	<!-- 公用CSS模块 -->
@@ -43,7 +43,8 @@
 							<img src="./static/images/logo.jpg" alt="" />
 						</a>
 					</div>
-					<h1 style="font-weight: 600; letter-spacing: 5px; align-items: center; font-size: 56px">马蹄踏花去，梅花破雪来
+					<h1 style="font-weight: 600; letter-spacing: 5px; align-items: center; font-size: 56px">
+						泰伯庙旁集盛会，至德祠侧涵非遗
 					</h1>
 				</div>
 			</div>
@@ -65,152 +66,32 @@
 						<ul class="nav navbar-nav">
 							<li><a href="/index.html" style="transition-duration: 150ms">主页</a></li>
 							<li class="dropdown">
-								<a href="/news-list.html" class="dropdown-toggle" data-toggle="dropdown"
-									one-link-mark="yes" style="transition-duration: 150ms">新闻列表<b class="caret"></b></a>
+								<a href="/wjdx.html" class="dropdown-toggle" data-toggle="dropdown" one-link-mark="yes"
+									style="transition-duration: 150ms">新闻列表<b class="caret"></b></a>
 								<ul class="dropdown-menu s-column columns-3">
 									<li>
 										<div class="col-sm-12">
 											<ul class="s-column-dropdown">
-												<li><a href="/news-wjdc.html" one-link-mark="yes">问卷调查</a></li>
+												<li><a href="/mhjj.html" one-link-mark="yes">泰伯庙会简介</a></li>
+											</ul>
+											<ul class="s-column-dropdown">
+												<li><a href="/news-wjdx.html" one-link-mark="yes">问卷调查</a></li>
+											</ul>
+											<ul class="s-column-dropdown">
+												<li><a href="/sdzf.html" one-link-mark="yes">实地走访</a></li>
+											</ul>
+											<ul class="s-column-dropdown">
+												<li><a href="/cftj.html" one-link-mark="yes">采访探究</a></li>
+											</ul>
+											<ul class="s-column-dropdown">
+												<li><a href="/wczz.html" one-link-mark="yes">文创制作</a></li>
 											</ul>
 										</div>
 									</li>
 								</ul>
 							</li>
-							<li><a href="https://www.wjx.cn/vm/tUyc0jI.aspx# " target="_self"
+							<li><a href="https://www.wjx.cn/vm/Ppo7iQk.aspx " target="_self"
 									style="transition-duration: 150ms">问卷调查</a></li>
-							<li><a href="/video.html" style="transition-duration: 150ms" target="_self">宣传片</a></li>
-							<li><a href="/brief-introduction.html" style="transition-duration: 150ms"
-									target="_self">规划简介</a></li>
-							<li><a href="/river.html" style="transition-duration: 150ms" target="_self">职业咨询</a></li>
-
-							<li>
-								<a>网站访问人数:&nbsp;<span id="index" class="leancloud_visitors" data-flag-title="index"> -
-									</span>次</a>
-							</li>
-
-							<script src="/av-min.js"></script>
-							<script>
-								// 第一个参数是appid，第二个参数是appkey，此处的只是示例
-								AV.init({
-									appId: "JXA5hbSnGqRYM9BFshmVy9rZ-MdYXbMMI",
-									appKey: "boZpBAUQF6xdmJMps2LcOymr",
-									serverURLs: "https://server.yzzxyhxz.top",
-								});
-								// 自己创建的Class的名字
-								var name = "Counter";
-								function createRecord(Counter) {
-									// 设置 ACL
-									var acl = new AV.ACL();
-									acl.setPublicReadAccess(true);
-									acl.setPublicWriteAccess(true);
-									// 获得span的所有元素
-									var elements = document.getElementsByClassName("leancloud_visitors");
-									// 一次创建多条记录
-									var allcounter = [];
-									for (var i = 0; i < elements.length; i++) {
-										// 若某span的内容不包括 '-' ，则不必创建记录
-										if (elements[i].textContent.indexOf("-") == -1) {
-											continue;
-										}
-										var title = elements[i].getAttribute("data-flag-title");
-										var url = elements[i].id;
-										var newcounter = new Counter();
-										newcounter.setACL(acl);
-										newcounter.set("title", title);
-										newcounter.set("url", url);
-										newcounter.set("time", 1);
-										allcounter.push(newcounter);
-										// 顺便更新显示span为默认值0
-										elements[i].textContent = 1;
-									}
-									AV.Object.saveAll(allcounter).then(
-										function (todo) {
-											// 成功保存记录之后
-											console.log("创建记录成功！");
-										},
-										function (error) {
-											// 异常错误
-											console.error("创建记录失败: " + error.message);
-										}
-									);
-								}
-								function showCount(Counter) {
-									// 是否需要创建新纪录的标志（添加一篇新文章）
-									var flag = false;
-									var query = new AV.Query(name);
-									query.greaterThanOrEqualTo("time", 0);
-									query.find().then(
-										function (results) {
-											// 当获取到的记录为0时置默认值
-											if (results.length == 0) {
-												$(".leancloud_visitors").text("-");
-												flag = true;
-												console.log("返回查询记录为空");
-												// 如果获取到空记录就创建新记录
-												createRecord(Counter);
-												return;
-											}
-											// 将获取到的数据设置为text
-											for (var i = 0; i < results.length; i++) {
-												var item = results[i];
-												var url = item.get("url");
-												var time = item.get("time");
-												console.log(i, "url", url, "time", time);
-												if (!!!document.getElementById(url)) {
-													continue;
-												}
-												var element = document.getElementById(url);
-												element.textContent = time;
-												var currentCount = parseInt(element.textContent);
-												var newCount = currentCount + 1;
-												element.textContent = newCount;
-
-												// 更新 LeanCloud 中对应记录的时间
-												var query = new AV.Query(name);
-												query.equalTo("url", url);
-												query
-													.first()
-													.then(function (result) {
-														if (result) {
-															result.set("time", newCount);
-															result
-																.save()
-																.then(function () {
-																	console.log("计数加一成功！");
-																})
-																.catch(function (error) {
-																	console.error("计数加一失败: " + error.message);
-																});
-														}
-													})
-													.catch(function (error) {
-														console.error("查询记录失败: " + error.message);
-													});
-											}
-											// 当某个span含有默认值时说明需要创建记录
-											if ($(".leancloud_visitors").text().indexOf("-") != -1) {
-												flag = true;
-											}
-											// 当获取的记录数与span个数不吻合时
-											// if (results.length != $(".leancloud_visitors").length) {
-											// 	flag = true;
-											// 	console.log("not equal");
-											// }
-											if (flag) {
-												createRecord(Counter);
-											}
-										},
-										function (error) {
-											console.log("query error:" + error.message);
-										}
-									);
-								}
-								$(function () {
-									var Counter = AV.Object.extend(name);
-									showCount(Counter);
-								});
-							</script>
 						</ul>
 					</div>
 				</div>
@@ -248,33 +129,33 @@
 			<div class="row">
 				<div class="col-md-7 news_left wow bounceInLeft">
 					<div class="imgd">
-						<a href="/news-wjdc.html"><img src="/static/images/ap1.jpg" alt="" /></a>
+						<a href="/news-wjdx.html"><img src="/static/images/ap1.jpg" alt="" /></a>
 						<i></i>
 						<span class="ri">
 							<i>02</i>
 							<p class="date">2023-05</p>
 						</span>
 					</div>
-					<h4><a href="/news-wjdc.html"> 马蹄踏花去，梅花破雪来 </a></h4>
+					<h4><a href="/news-wjdx.html"> 泰伯庙旁集盛会，至德祠侧涵非遗 </a></h4>
 
 					<div class="news_right">
 						<ul>
 							<li class="wow bounceInLeft" data-wow-delay="0.5s">
-								<a href="/news-wjdc.html">
+								<a href="/news-wjdx.html">
 									<span class="ri">
 										<i>31</i>
 										<p>2023-07</p>
 									</span>
 									<div class="wen_nei">
-										<h4>有关职业生涯规划的问卷调查</h4>
-										<p>中学生领导力大赛第24小组在江苏省无锡市进行了问卷调查</p>
+										<h4>问卷调查</h4>
+										<p>在对庙会文化有了初步认知后，决定以此为题目的我们开展了相关的调查研究。</p>
 									</div>
 									<div class="clearfix"></div>
 								</a>
 							</li>
 						</ul>
 					</div>
-					<a href="/news-list.html" class="more wow fadeInq animated" data-wow-delay="1.5s"
+					<a href="/wjdx.html" class="more wow fadeInq animated" data-wow-delay="1.5s"
 						style="visibility: visible; animation-delay: 1.5s; animation-name: fadeInq">了解更多</a>
 				</div>
 				<div class="col-md-5 wow bounceInRight">
@@ -286,7 +167,7 @@
 							<div class="form-group">
 								<div class="col-md-12">
 									<a class="btn btn-index reg-bg" style="margin-left: 8px"
-										href="https://www.wjx.cn/vm/tUyc0jI.aspx# ">
+										href="https://www.wjx.cn/vm/Ppo7iQk.aspx ">
 										<!--<i class="fa fa-group"></i> -->
 										问卷调查
 									</a>
@@ -315,7 +196,7 @@
 										<!--<i class="fa fa-user"></i> -->
 										规划简介
 									</a>
-									<a class="btn btn-index log-bg" style="padding-left: 85px" href="/news-list.html">
+									<a class="btn btn-index log-bg" style="padding-left: 85px" href="/wjdx.html">
 										<!--<i class="fa fa-user"></i> -->
 										相关新闻
 									</a>
@@ -332,9 +213,13 @@
 				<div class="a_right">
 					<div class="span_y">团队简介</div>
 					<div class="span_z">OUR PROFILE</div>
-					<p>中学生领导力大赛“扶摇”小组，是一群胸怀理想，希望用实际行动回报社会的青年学生，建立此网站主要是为了宣传“马蹄踏花去，梅花破雪来”系列活动——由本小组发起，以高中、大学生为主要受众，向社会面辐射的京杭大运河文化与环境保护活动，以全国中学生领导力大赛为契机，向同学以及群众进行职业生涯规划的宣传，理念是“马蹄踏花去，梅花破雪来”，希望让更多人了解职业生涯规划相关内容。
-					</p>
-					<a href="/about-us.html" class="more">查看更多>></a>
+					<p>时源朗:项目总策划和ppt制作
+						谈恩潼:海报设计、明信片制作、视频剪辑
+						尤琪:调研和明信片制作
+						戴海茹:问卷调查分发和明信片制作
+						王斯萌 文稿撰写和明信片制作
+						朱佳慧:调研和视频制作
+						邰雪亮:后勤及资料整理</p>
 				</div>
 			</div>
 			<div class="new-info-l wow bounceInLeft">
